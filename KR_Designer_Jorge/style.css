@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root {
+  --firstColor: #ff0066;
+  --secondColor: #ffffff;
+  --tercerColor: #000000;
+}
+
+[data-theme="dark"] {
+  --secondColor: #000000;
+  --tercerColor: #ffffff;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--tercerColor);
+  color: var(--secondColor);
+}
+
+/* CAMBIAR COLORES */
+.theme-switch-wrapper {
+  width: 40%;
+  height: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.theme-switch {
+  display: block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: white;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transition: 0.4s all;
+}
+
+.slider:before {
+  background-color: #ff0066;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s all;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #ff0066;
+}
+input:checked + .slider:before {
+  background-color: white;
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 50px;
+}
+.slider.round::before {
+  border-radius: 50px;
+}
+
+.name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 4rem;
+  width: 60%;
+}
+.nameUp {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.colorName {
+  color: var(--firstColor);
+}
+
+/* CONTENEDOR GLOBAL */
+.boxContendAll {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Barra de navegacion fijada en la parte inferior */
+
+.boxNav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10%;
+  z-index: 10;
+}
+header {
+  display: flex;
+}
+.navBar {
+  width: max-content;
+  border: 4px solid var(--secondColor);
+  border-radius: 50px;
+  background-color: #000000;
+}
+.navBar ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 15px;
+  gap: 10px;
+}
+.navBar ul li {
+  padding: 10px;
+  border-radius: 60px;
+  transition: all 0.7s;
+}
+.navBar ul li:hover {
+  background-color: #ff0066;
+}
+.navBar * a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+}
+
+/* CONTENIDO */
+.firstView {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.iconScroll {
+  transform: rotate(270deg);
+  background-color: black;
+  border-radius: 50px;
+}
+
+/* Sobre mi */
+.sobreMi {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.name2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  padding: 0 2rem;
+}
+.cargo {
+  color: var(--firstColor);
+  font-size: 1.7rem;
+}
+.description {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60%;
+  height: auto;
+}
+.csharp {
+  color: purple;
+  font-weight: bold;
+}
+.git {
+  color: tomato;
+  font-weight: bold;
+}
+.github {
+  font-weight: bold;
+}
+.sql {
+  font-weight: bold;
+  color: lightblue;
+}
+.net {
+  color: purple;
+  font-weight: bold;
+}
+.message {
+  font-size: 1.5rem;
+  padding: 0 4rem;
+  text-align: center;
+  color: #ff0066;
+  font-weight: bold;
+}
+
+/* PORTAFOLIO */
+.portafolio {
+  width: 100%;
+  height: 100vh;
+}
+.boxContainerPortafolio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  gap: 30px;
+}
+.boxUp {
+  height: auto;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.boxCenter {
+  height: auto;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxDown {
+  height: auto;
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.boxProject {
+  width: 100%;
+  height: auto;
+}
+.boxProject video {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 24px 1px #ff0066;
+  border-radius: 15px;
+}
+
+/* CONTACTO */
+.contacto {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--firstColor);
+  padding: 40px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .name {
+    padding: 2rem 2rem;
+  }
+  .boxNav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10%;
+  }
+  .navBar {
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navBar ul li {
+    padding: 5px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navBar * a {
+    font-size: 1rem;
+    padding: 0.3rem;
+    text-align: center;
+  }
+  .cargo {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .portafolio {
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .boxContainerPortafolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .boxProject video {
+    box-shadow: 0 0 10px 1px #ff0066;
+  }
+  .boxUp {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxCenter {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxDown {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* CONTACTO */
+  .contacto {
+    width: 100%;
+    height: 100vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondColor);
+  }
+  .phone {
+    font-size: 3rem;
+  }
+}
