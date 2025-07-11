@@ -7,7 +7,5 @@ Repositorio enfocado en creación de CV con diferentes diseños y tecnologías.
 + HTML
 + CSS
 + JavaScript
-+ ### Frameworks
-  + Bootstrap
 
 > Es lo planeado hasta el momento
