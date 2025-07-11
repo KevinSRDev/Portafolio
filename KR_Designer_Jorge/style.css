@@ -265,36 +265,37 @@ header {
   width: 100%;
   height: 100dvh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;align-items: center;
   padding: 40px;
   gap: 30px;
 }
 .boxUp {
   height: auto;
   width: 30%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 .boxCenter {
   height: auto;
   width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .boxDown {
   height: auto;
   width: 30%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .boxProject {
   width: 100%;
   height: auto;
 }
+.up{
+  transform: scale(.6);
+}
+.center{
+  transform: scale(1.1);
+}
+.down{
+  transform: scale(.6);
+}
+
 .boxProject video {
   object-fit: contain;
   width: 100%;
