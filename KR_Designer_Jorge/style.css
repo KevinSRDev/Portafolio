@@ -25,9 +25,23 @@ body {
 }
 
 /* CAMBIAR COLORES */
+header{
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  background-color: var(--tercerColor);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  border: 3px solid var(--firstColor);
+  border-radius: 50px;
+}
 .theme-switch-wrapper {
   width: 40%;
-  height: 100%;
+  height: auto;
   padding: 20px 40px;
   display: flex;
   justify-content: center;
@@ -96,7 +110,9 @@ input:checked + .slider:before {
   text-transform: uppercase;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 .colorName {
   color: var(--firstColor);
@@ -143,6 +159,7 @@ header {
   border-radius: 60px;
   transition: all 0.7s;
 }
+
 .navBar ul li:hover {
   background-color: #ff0066;
 }
@@ -158,7 +175,7 @@ header {
 /* CONTENIDO */
 .firstView {
   width: 100%;
-  height: 60vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,19 +183,20 @@ header {
 }
 .iconScroll {
   transform: rotate(270deg);
-  background-color: black;
+  background-color: var(--secondColor);
   border-radius: 50px;
 }
 
 /* Sobre mi */
 .sobreMi {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  padding: 50px;
 }
 
 .name2 {
@@ -217,6 +235,19 @@ header {
   color: purple;
   font-weight: bold;
 }
+.javaScript {
+  color: yellow;
+  font-weight: bold;
+}
+.css {
+  color: lightblue;
+  font-weight: bold;
+}
+.html {
+  color: orange;
+  font-weight: bold;
+}
+
 .message {
   font-size: 1.5rem;
   padding: 0 4rem;
@@ -228,11 +259,11 @@ header {
 /* PORTAFOLIO */
 .portafolio {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 .boxContainerPortafolio {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   display: flex;
   justify-content: space-around;
   padding: 40px;
@@ -275,7 +306,7 @@ header {
 /* CONTACTO */
 .contacto {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,8 +330,14 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .firstView {
+    height: 60dvh;
+  }
   .name {
     padding: 2rem 2rem;
+  }
+  .nameUp {
+    font-size: 1rem;
   }
   .boxNav {
     width: 100%;
@@ -329,10 +366,30 @@ footer {
     padding: 0.3rem;
     text-align: center;
   }
+  /* Sobre mi */
+  .sobreMi {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .name2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    padding: 0 2rem;
+  }
   .cargo {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     text-align: center;
   }
+  .description {
+    font-size: 1.3rem;
+  }
+  .message {
+    font-size: 1.4rem;
+  }
+
   .portafolio {
     height: auto;
     padding: 10px;
@@ -377,7 +434,7 @@ footer {
   /* CONTACTO */
   .contacto {
     width: 100%;
-    height: 100vmax;
+    height: 60dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,5 +442,8 @@ footer {
   }
   .phone {
     font-size: 3rem;
+  }
+  footer {
+    font-size: 1rem;
   }
 }
