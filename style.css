@@ -5,11 +5,13 @@
   --firstColor: #ff0066;
   --secondColor: #f6f6f6;
   --tercerColor: #000000;
+  --shadow: #fff;
 }
 
 [data-theme="dark"] {
   --secondColor: #000000;
   --tercerColor: #f6f6f6;
+  --shadow: #000;
 }
 
 * {
@@ -410,7 +412,7 @@ input:checked+.slider:before {
   object-fit: contain;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 24px 1px #ff0066;
+  box-shadow: 0 0 24px 1px var(--shadow);
   border-radius: 15px;
 }
 
