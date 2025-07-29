@@ -191,12 +191,28 @@ input:checked+.slider:before {
   justify-content: center;
   align-items: center;
   padding: 40px;
+  animation-name: mymove 5s infinite;
 }
 
-.iconScroll {
-  transform: rotate(270deg);
-  background-color: var(--secondColor);
-  border-radius: 50px;
+.animation-icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: mymove 1.5s infinite;
+}
+
+.firstView i {
+  font-size: 6rem;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 50px;
+  }
 }
 
 /* Sobre mi */
